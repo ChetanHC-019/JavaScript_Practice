@@ -1,0 +1,17 @@
+{
+  "name": "jspractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "HTTP.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "moment": "^2.29.3",
+    "strftime": "^0.10.1",
+    "typescript": "^4.6.4"
+  }
+}
