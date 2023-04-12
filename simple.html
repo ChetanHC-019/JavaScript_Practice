@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ const fetch_posts=async()=>{
+    const response=await fetch('https://jsonplaceholder.typicode.com/posts')
+    const posts= await response.json()
+   document.getElementById("posts").innerHTML=JSON.stringify(posts)
+}
+fetch_posts()
+
+    </script>
+
+    <h1>Hii</h1>
+    <h5 id="posts"></h5>
+</body>
+</html>

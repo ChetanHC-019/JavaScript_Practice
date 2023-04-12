@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Event Delegation</title>
+    </head>
+    <body>
+
+        <div>
+            <ul id="category">
+                <li id="laptop">Laptops</li>
+                <li id="cameras">cameras</li>
+                <li id="shoes">Shoes</li>
+            </ul>
+        </div>
+
+
+        <div id="form">
+            <input type="text" id="name" placeholder="enter name" data-upperCase>
+            <input type="text" id="pan" placeholder="enter PAN no." data-upperCase>
+            <input type="text" id="address" placeholder="enter address" data-upperCase>
+        </div>
+
+        <script>
+           
+           document.getElementById("category").addEventListener('click',(e)=>{
+                console.log(e.target.id)
+                window.location.href="/" + e.target.id
+           })
+
+           document.getElementById("form").addEventListener('keyup',(e)=>{
+              console.log(e);
+              if(e.target.dataset.uppercase != undefined){
+                e.target.value=e.target.value.toUpperCase();
+              }
+           })          
+              
+              
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            div{
+                min-height: 100px;
+                min-width: 100px;
+                border: 1px solid black;
+                padding: 30px;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <div id="grandparent">
+            <div id="parent">
+                <div id="child"></div>
+            </div>
+        </div>
+        
+        <script>
+            let grandparent=document.getElementById("grandparent")
+              grandparent.addEventListener("click",(e)=>{
+                console.log("grandparent clicked")
+                e.stopPropagation();
+              },true)
+
+              let parent=document.getElementById("parent")
+              parent.addEventListener("click",()=>{
+               
+                console.log("Parent clicked")
+                
+              },true)
+
+              let child=document.getElementById("child")
+              child.addEventListener("click",()=>{ 
+               
+              },true)
+       </script>
+    </body>
+</html>

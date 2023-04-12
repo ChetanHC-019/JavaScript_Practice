@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+    <body id="bdy">
+        <div id="container">
+            <button id="btn">Click Me!</button>
+        </div>
+<br>
+<br>
+    <ul id="myList">
+        <li>apple</li>
+        <li>ball</li>
+        <li>cat</li>
+    </ul>
+        <script type="text/javascript">
+            // document.getElementById('bdy')
+            //     .addEventListener('click', function () {
+            //     alert('Body!');
+            // })
+            // document.getElementById('container')
+            //     .addEventListener('click', function () {
+            //     alert('Div!');
+            // }, true)
+            // document.getElementById('btn')
+            //     .addEventListener('click', function () {
+            //     alert('Button!');
+            // })
+
+        
+            const myList=document.getElementById("myList");
+
+            const newLi=document.createElement("li")
+            newLi.textContent="newList"
+
+            myList.addEventListener("click",function(e){
+                console.log(e)
+                const target=e.target
+
+                if(target.matches("li")){
+                    target.style.backgroundColor="red"
+                }
+                else{
+                    target.style.backgroundColor="blue"
+                }
+
+                myList.appendChild(newLi)
+            })
+
+           
+
+
+
+        </script>
+    </body>
+    </html>
+   
